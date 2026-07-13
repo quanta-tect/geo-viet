@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist GEO 30 ngày cho site mới | GEO Việt Nam</title>
+  <meta name="description" content="Checklist GEO 30 ngày cho site mới: robots.txt mẫu, sitemap, Search Console, Bing Webmaster Tools, content plan, schema và tracking.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/checklist.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Checklist GEO 30 ngày cho site mới">
+  <meta property="og:description" content="Từ robots.txt đến 10 bài đầu tiên: lộ trình thực thi GEO nhanh cho website mới.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/checklist.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"HowTo",
+        "name":"Checklist GEO 30 ngày cho site mới",
+        "description":"Các bước thực thi GEO trên GitHub Pages trong 30 ngày đầu.",
+        "step":[
+          {"@type":"HowToStep","name":"Mở crawl và tạo file kỹ thuật cơ bản"},
+          {"@type":"HowToStep","name":"Xuất bản 3 trang nền tảng"},
+          {"@type":"HowToStep","name":"Submit Search Console và Bing Webmaster Tools"},
+          {"@type":"HowToStep","name":"Xuất bản 10 bài long-tail đầu tiên"},
+          {"@type":"HowToStep","name":"Theo dõi và cập nhật hàng tuần"}
+        ],
+        "inLanguage":"vi",
+        "url":"https://quanta-tect.github.io/geo-viet/checklist.html"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Có cần làm đủ 30 ngày mới có tín hiệu không?",
+            "acceptedAnswer":{"@type":"Answer","text":"Không. Nếu site public, crawl tốt và có vài trang answer-first hữu ích, bạn có thể bắt đầu nhận index và impression sớm. 30 ngày chỉ là khung triển khai có kỷ luật."}
+          },
+          {
+            "@type":"Question",
+            "name":"Bing Webmaster Tools có nên dùng không?",
+            "acceptedAnswer":{"@type":"Answer","text":"Có. Đây là một bước chi phí thấp để submit sitemap, kiểm tra index và mở thêm cơ hội được các hệ thống AI discovery lấy dữ liệu nhanh hơn."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Lộ trình thực thi</p>
+      <h1>Checklist GEO 30 ngày cho site mới</h1>
+      <p class="lead">Nếu bạn chỉ có một repo GitHub Pages và muốn ra tín hiệu càng nhanh càng tốt, hãy làm theo đúng thứ tự dưới đây: mở crawl, xuất bản 3 trang nền, submit index, rồi mới scale nội dung.</p>
+
+      <div class="checklist-card">
+        <h2>Tuần 1 — nền kỹ thuật</h2>
+        <label class="check"><input type="checkbox"> Tạo <code>robots.txt</code> và cho phép crawl với Googlebot, Bingbot, OAI-SearchBot, PerplexityBot</label>
+        <label class="check"><input type="checkbox"> Tạo <code>sitemap.xml</code> với đủ URL quan trọng</label>
+        <label class="check"><input type="checkbox"> Tạo <code>llms.txt</code> như file phụ trợ chi phí thấp</label>
+        <label class="check"><input type="checkbox"> Thêm canonical, title, meta description cho từng trang</label>
+        <label class="check"><input type="checkbox"> Thêm JSON-LD tối thiểu: WebSite, Article, FAQPage, WebApplication</label>
+      </div>
+
+      <h2>Mẫu robots.txt bạn có thể dùng ngay</h2>
+      <div class="code-block">
+<pre><code>User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://quanta-tect.github.io/geo-viet/sitemap.xml
+</code></pre>
+      </div>
+      <p class="tip">Nếu bạn không muốn nội dung bị dùng cho training, bạn có thể đổi riêng <code>GPTBot</code> sang <code>Disallow: /</code> mà vẫn để <code>OAI-SearchBot</code> mở.</p>
+
+      <div class="checklist-card">
+        <h2>Tuần 2 — publish bộ trang nền</h2>
+        <label class="check"><input type="checkbox"> Publish 1 trang trụ cột: GEO là gì + cách làm</label>
+        <label class="check"><input type="checkbox"> Publish 1 checklist: 30 ngày GEO cho site mới</label>
+        <label class="check"><input type="checkbox"> Publish 1 tool nhỏ: prompt generator audit GEO</label>
+        <label class="check"><input type="checkbox"> Tạo internal links giữa cả 3 trang</label>
+        <label class="check"><input type="checkbox"> Đặt câu trả lời ngắn ngay đầu mỗi section</label>
+      </div>
+
+      <h2>Tuần 3 — index và đo lường</h2>
+      <ul class="bullet-list">
+        <li>Thêm site vào Google Search Console.</li>
+        <li>Submit sitemap trong Google Search Console.</li>
+        <li>Thêm site vào Bing Webmaster Tools.</li>
+        <li>Submit sitemap trong Bing Webmaster Tools.</li>
+        <li>Kiểm tra thủ công 3–5 URL quan trọng đã crawl được chưa.</li>
+        <li>Thêm analytics nếu muốn track nguồn referrer từ AI.</li>
+      </ul>
+
+      <div class="checklist-card">
+        <h2>Tuần 4 — scale nội dung long-tail</h2>
+        <label class="check"><input type="checkbox"> Viết 5 bài FAQ: OAI-SearchBot, GPTBot, llms.txt, AI Overviews, Perplexity</label>
+        <label class="check"><input type="checkbox"> Viết 3 bài so sánh: SEO vs GEO, ChatGPT vs Perplexity, AI Overviews vs organic</label>
+        <label class="check"><input type="checkbox"> Viết 2 bài how-to: sửa robots.txt, thêm schema FAQ</label>
+        <label class="check"><input type="checkbox"> Cập nhật ngày sửa đổi rõ trên các trang chính</label>
+      </div>
+
+      <h2>10 slug nên làm ngay</h2>
+      <div class="code-block">
+<pre><code>/geo-la-gi
+/cach-len-chatgpt-search
+/oai-searchbot-la-gi
+/llms-txt-co-can-khong
+/robots-txt-cho-ai-crawler
+/perplexity-citation-la-gi
+/seo-vs-geo-vs-aeo
+/cach-do-ai-visibility
+/google-ai-overviews-la-gi
+/schema-faq-cho-geo
+</code></pre>
+      </div>
+
+      <h2>Nguyên tắc viết từng bài</h2>
+      <ol>
+        <li>Định nghĩa ngắn 40–80 từ ngay đầu bài.</li>
+        <li>Dùng heading dạng câu hỏi tự nhiên.</li>
+        <li>Mỗi đoạn chỉ 2–4 câu.</li>
+        <li>Ưu tiên bullet, bảng, checklist, ví dụ hơn là văn dài.</li>
+        <li>Thêm phần “khi nào nên / không nên”.</li>
+        <li>Kết bài bằng FAQ hoặc bước hành động tiếp theo.</li>
+      </ol>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>Có cần domain riêng ngay không?</summary>
+          <p>Nếu bạn đã xác định niche này sẽ theo đuổi nghiêm túc hơn vài tuần, nên mua sớm. Còn nếu vẫn đang test, cứ lên bằng GitHub Pages trước rồi trỏ domain sau.</p>
+        </details>
+        <details>
+          <summary>Có cần nhiều trang ngay từ đầu không?</summary>
+          <p>Không cần quá nhiều. 3 trang chất lượng + 10 bài long-tail đầu tiên tốt hơn 50 trang mỏng.</p>
+        </details>
+        <details>
+          <summary>Site tĩnh có đủ mạnh không?</summary>
+          <p>Đủ mạnh cho giai đoạn đầu. Thậm chí còn có lợi thế tốc độ, ổn định và dễ crawl.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tool.html">Mở tool audit GEO</a>
+        <a class="btn btn-secondary" href="index.html">Quay về trang chủ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Checklist triển khai cho site GitHub Pages.</p>
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# GEO Việt Nam
+
+> File phụ trợ cho agent/LLM. Không bắt buộc cho Google Search.
+
+## Site root
+- https://quanta-tect.github.io/geo-viet/
+
+## Important pages
+- /index.html: Trang trụ cột về GEO, ChatGPT Search, Google AI, Perplexity.
+- /checklist.html: Checklist GEO 30 ngày cho site mới.
+- /tool.html: Tool tạo prompt audit GEO miễn phí.
+
+## Preferred summary
+GEO Việt Nam là một micro-site tiếng Việt về Generative Engine Optimization, Answer Engine Optimization và AI search visibility. Nội dung tập trung vào answer-first guides, checklist thực thi, robots.txt, sitemap, schema và utility nhỏ phù hợp với GitHub Pages.

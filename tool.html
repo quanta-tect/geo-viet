@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tool Audit GEO miễn phí | GEO Việt Nam</title>
+  <meta name="description" content="Tool tạo prompt audit GEO miễn phí: nhập domain, niche, đối thủ và tạo prompt để audit SEO/GEO cho ChatGPT hoặc Perplexity.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/tool.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tool Audit GEO miễn phí">
+  <meta property="og:description" content="Sinh prompt audit GEO cho ChatGPT và Perplexity chỉ trong vài giây.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/tool.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Tool Audit GEO miễn phí",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Any",
+    "browserRequirements":"Requires JavaScript",
+    "url":"https://quanta-tect.github.io/geo-viet/tool.html",
+    "inLanguage":"vi",
+    "description":"Công cụ tạo prompt audit GEO cho website mới trên GitHub Pages."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Utility nhỏ để tăng giá trị thực tế</p>
+      <h1>Tool tạo prompt audit GEO</h1>
+      <p class="lead">Nhập vài thông tin cơ bản, bấm tạo prompt, rồi dán prompt đó vào ChatGPT, Perplexity hoặc Claude để audit cơ hội GEO cho site của bạn.</p>
+
+      <div class="tool-grid">
+        <form id="promptForm" class="form-card">
+          <label>
+            Domain hoặc URL site
+            <input id="siteUrl" type="text" placeholder="https://tenmiencuaban.com hoặc https://USERNAME.github.io/geo-viet/">
+          </label>
+          <label>
+            Niche / chủ đề chính
+            <input id="niche" type="text" placeholder="GEO, AI SEO, bất động sản, Excel, CV...">
+          </label>
+          <label>
+            Khách hàng mục tiêu
+            <input id="audience" type="text" placeholder="chủ shop, marketer, founder, học sinh...">
+          </label>
+          <label>
+            Đối thủ muốn so sánh
+            <input id="competitors" type="text" placeholder="site1.com, site2.com, site3.com">
+          </label>
+          <label>
+            Ngôn ngữ nội dung
+            <input id="language" type="text" value="Tiếng Việt">
+          </label>
+          <label>
+            Mục tiêu chính
+            <select id="goal">
+              <option value="được cite trong ChatGPT và Perplexity">Được cite trong ChatGPT và Perplexity</option>
+              <option value="tăng visibility trong Google AI Overviews">Tăng visibility trong Google AI Overviews</option>
+              <option value="xây content hub GEO từ đầu">Xây content hub GEO từ đầu</option>
+              <option value="tăng organic + GEO cùng lúc">Tăng organic + GEO cùng lúc</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full">Tạo prompt</button>
+        </form>
+
+        <div class="output-card">
+          <div class="output-head">
+            <h2>Prompt kết quả</h2>
+            <button id="copyBtn" class="btn btn-secondary" type="button">Copy</button>
+          </div>
+          <textarea id="promptOutput" rows="20" placeholder="Prompt sẽ hiện ở đây..."></textarea>
+          <p class="tip">Mẹo: sau khi AI trả lời, hãy hỏi tiếp: “hãy sắp xếp theo impact/effort và cho tôi kế hoạch 30 ngày”.</p>
+        </div>
+      </div>
+
+      <section class="section-inner">
+        <h2>Prompt mẫu sẵn</h2>
+        <div class="code-block">
+<pre><code>Hãy đóng vai chuyên gia GEO/AEO. Audit website của tôi về khả năng được cite trong ChatGPT, Perplexity và Google AI.
+
+Yêu cầu:
+1. Tóm tắt 5 vấn đề lớn nhất đang cản trở visibility.
+2. Chấm điểm 0-10 cho: crawlability, answer-first structure, topical authority, schema, freshness, internal links.
+3. Đề xuất 10 bài content long-tail nên viết trước để lên nhanh.
+4. Viết mẫu robots.txt phù hợp.
+5. Gợi ý 3 tool hoặc utility nhỏ nên thêm để tăng value.
+6. Lập plan 30 ngày theo mức impact/effort.
+</code></pre>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Tool tạo prompt audit dùng được ngay trên GitHub Pages.</p>
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
