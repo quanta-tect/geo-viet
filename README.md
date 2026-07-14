@@ -13,17 +13,17 @@
 - `llms.txt`
 - `404.html`
 
-## Trước khi publish
-Tìm và thay toàn bộ chuỗi sau trong các file:
+## Trạng thái hiện tại
+Bản workspace này đã được cập nhật theo GitHub username hiện tại:
 
 ```text
 quanta-tect
 ```
 
-Ví dụ nếu GitHub username của bạn là `nguyenvana` thì đổi thành:
+URL project page đang dùng là:
 
 ```text
-https://nguyenvana.github.io/geo-viet/
+https://quanta-tect.github.io/geo-viet/
 ```
 
 ## Cách đẩy lên GitHub Pages

@@ -7,6 +7,9 @@
 
 ## Important pages
 - /index.html: Trang trụ cột về GEO, ChatGPT Search, Google AI, Perplexity.
+- /geo-la-gi.html: Bài nền tảng giải thích GEO.
+- /oai-searchbot-la-gi.html: Hướng dẫn lên ChatGPT Search bằng OAI-SearchBot.
+- /llms-txt-co-can-khong.html: Phân tích thực tế về llms.txt.
 - /checklist.html: Checklist GEO 30 ngày cho site mới.
 - /tool.html: Tool tạo prompt audit GEO miễn phí.
 

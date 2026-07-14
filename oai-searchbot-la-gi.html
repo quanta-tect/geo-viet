@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OAI-SearchBot là gì? Cách lên ChatGPT Search đúng cách | GEO Việt Nam</title>
+  <meta name="description" content="OAI-SearchBot là crawler cho ChatGPT Search. Xem OAI-SearchBot khác GPTBot thế nào, robots.txt mẫu và cách mở quyền crawl đúng cách.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/oai-searchbot-la-gi.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OAI-SearchBot là gì? Cách lên ChatGPT Search đúng cách">
+  <meta property="og:description" content="Giải thích OAI-SearchBot, khác GPTBot, robots.txt mẫu và các lỗi thường gặp khiến site không lên ChatGPT Search.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/oai-searchbot-la-gi.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"OAI-SearchBot là gì? Cách lên ChatGPT Search đúng cách",
+        "description":"Giải thích crawler OAI-SearchBot và cách cấu hình robots.txt cho ChatGPT Search.",
+        "datePublished":"2026-07-14",
+        "dateModified":"2026-07-14",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/oai-searchbot-la-gi.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"OAI-SearchBot là gì?","acceptedAnswer":{"@type":"Answer","text":"OAI-SearchBot là bot dùng cho tính năng search của ChatGPT. Nếu chặn bot này, nội dung của bạn khó được đưa vào ChatGPT Search answers."}},
+          {"@type":"Question","name":"OAI-SearchBot có giống GPTBot không?","acceptedAnswer":{"@type":"Answer","text":"Không. OAI-SearchBot phục vụ search visibility còn GPTBot phục vụ thu thập nội dung cho training. Hai thiết lập này độc lập nhau."}},
+          {"@type":"Question","name":"Muốn lên ChatGPT Search thì cần làm gì?","acceptedAnswer":{"@type":"Answer","text":"Hãy đảm bảo site public, không chặn OAI-SearchBot trong robots.txt, nội dung dễ crawl, và các trang chính có cấu trúc answer-first rõ ràng."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">ChatGPT Search</p>
+      <h1>OAI-SearchBot là gì?</h1>
+      <p class="lead"><strong>OAI-SearchBot</strong> là crawler phục vụ <strong>ChatGPT Search</strong>. Nếu site của bạn chặn bot này, trang của bạn có thể không xuất hiện trong các câu trả lời tìm kiếm của ChatGPT. Nếu mục tiêu của bạn là được ChatGPT cite, đây là bot quan trọng nhất cần mở.</p>
+
+      <h2>OAI-SearchBot dùng để làm gì?</h2>
+      <p>Theo tài liệu chính thức của OpenAI, OAI-SearchBot được dùng để đưa website vào search results trong các tính năng search của ChatGPT. Đây là bot dành cho <strong>search visibility</strong>, không phải bot training.</p>
+
+      <h2>OAI-SearchBot khác GPTBot thế nào?</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>OAI-SearchBot</h3>
+          <ul class="bullet-list">
+            <li>phục vụ ChatGPT Search</li>
+            <li>ảnh hưởng việc có được cite/search hay không</li>
+            <li>nên mở nếu muốn xuất hiện trong ChatGPT Search</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>GPTBot</h3>
+          <ul class="bullet-list">
+            <li>phục vụ training model</li>
+            <li>không đồng nghĩa với search visibility</li>
+            <li>có thể chặn riêng nếu không muốn training</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tip">Quan trọng: <strong>OAI-SearchBot và GPTBot độc lập nhau</strong>. Bạn có thể mở search nhưng chặn training.</p>
+
+      <h2>Muốn lên ChatGPT Search thì cần làm gì?</h2>
+      <ol>
+        <li>Không chặn OAI-SearchBot trong <code>robots.txt</code>.</li>
+        <li>Đảm bảo site public, không yêu cầu login.</li>
+        <li>Giữ nội dung chính trong HTML dễ đọc.</li>
+        <li>Xuất bản các trang answer-first có FAQ, bullet, ví dụ.</li>
+        <li>Có sitemap và internal links rõ ràng.</li>
+      </ol>
+
+      <h2>Mẫu robots.txt cho ChatGPT Search</h2>
+      <div class="code-block">
+<pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
+</code></pre>
+      </div>
+      <p>Mẫu trên phù hợp khi bạn muốn <strong>xuất hiện trong ChatGPT Search</strong> nhưng <strong>không muốn nội dung bị dùng cho training</strong>.</p>
+
+      <h2>Lỗi thường gặp khiến site không lên ChatGPT Search</h2>
+      <ul class="bullet-list">
+        <li>chặn nhầm OAI-SearchBot trong robots.txt</li>
+        <li>WAF/CDN chặn bot dù robots.txt đang allow</li>
+        <li>nội dung chính nằm sau JS nặng</li>
+        <li>trang quá mỏng, không trả lời thẳng vào câu hỏi</li>
+        <li>không có trang đủ rõ để AI trích dẫn</li>
+      </ul>
+
+      <h2>Nguồn chính thức</h2>
+      <ul class="bullet-list">
+        <li><a href="https://platform.openai.com/docs/bots" target="_blank" rel="noopener">OpenAI: Overview of OpenAI Crawlers</a></li>
+        <li><a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener">OpenAI: Publishers and Developers FAQ</a></li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>OAI-SearchBot là gì?</summary>
+          <p>Đây là crawler dành cho search features của ChatGPT.</p>
+        </details>
+        <details>
+          <summary>OAI-SearchBot có giống GPTBot không?</summary>
+          <p>Không. Một bot cho search, một bot cho training.</p>
+        </details>
+        <details>
+          <summary>Có cần mở cả hai không?</summary>
+          <p>Không bắt buộc. Nếu chỉ muốn ChatGPT Search, hãy ưu tiên mở OAI-SearchBot. GPTBot có thể cho phép hoặc chặn tùy chính sách nội dung của bạn.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="llms-txt-co-can-khong.html">Đọc tiếp: llms.txt có cần không?</a>
+        <a class="btn btn-secondary" href="tool.html">Mở tool audit</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 14-07-2026</p>
+      </div>
+      <div>
+        <a href="geo-la-gi.html">GEO là gì?</a>
+        <a href="checklist.html">Checklist</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
