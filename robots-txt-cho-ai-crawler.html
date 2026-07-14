@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mẫu robots.txt cho AI crawler | GEO Việt Nam</title>
+  <meta name="description" content="Mẫu robots.txt cho AI crawler: OAI-SearchBot, GPTBot, PerplexityBot, Googlebot. Dùng cho ChatGPT Search, Google AI và Perplexity.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/robots-txt-cho-ai-crawler.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mẫu robots.txt cho AI crawler">
+  <meta property="og:description" content="Mẫu robots.txt cho OAI-SearchBot, GPTBot, PerplexityBot: khi nào mở, khi nào chặn, cách tránh lỗi khiến site không lên ChatGPT Search.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/robots-txt-cho-ai-crawler.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"Mẫu robots.txt cho AI crawler",
+        "description":"Mẫu robots.txt cho OAI-SearchBot, GPTBot, PerplexityBot và các crawler AI phổ biến.",
+        "datePublished":"2026-07-14",
+        "dateModified":"2026-07-14",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/robots-txt-cho-ai-crawler.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"robots.txt là gì?","acceptedAnswer":{"@type":"Answer","text":"robots.txt là file quy định bot nào được crawl trang nào trên website của bạn."}},
+          {"@type":"Question","name":"Nên mở bot nào?","acceptedAnswer":{"@type":"Answer","text":"Nên mở OAI-SearchBot để lên ChatGPT Search và cho phép Googlebot nếu mục tiêu có cả Google AI Overviews."}},
+          {"@type":"Question","name":"Lỗi thường gặp khi nào?","acceptedAnswer":{"@type":"Answer","text":"Chặn nhầm OAI-SearchBot, WAF chặn dù robots.txt allow, hoặc để nội dung chính sau JS nặng."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Utility</p>
+      <h1>Mẫu robots.txt cho AI crawler</h1>
+      <p class="lead">robots.txt quy định bot nào được phép crawl site của bạn. Nếu muốn site lên <strong>ChatGPT Search</strong> và các công cụ AI khác, hãy đảm bảo không chặn các crawler quan trọng.</p>
+
+      <h2>robots.txt là gì?</h2>
+      <p>File <code>robots.txt</code> đặt ở gốc domain để hướng dẫn crawler những đường dẫn được phép truy cập. Đây là nền tảng crawlability cho mọi loại SEO và GEO.</p>
+
+      <h2>Nên mở bot nào?</h2>
+      <ul class="bullet-list">
+        <li><strong>Googlebot</strong>: nếu bạn muốn lên Google AI Overviews.</li>
+        <li><strong>OAI-SearchBot</strong>: bắt buộc nếu muốn xuất hiện trong ChatGPT Search.</li>
+        <li><strong>PerplexityBot</strong>: nếu muốn tăng khả năng được Perplexity cite.</li>
+      </ul>
+
+      <h2>OAI-SearchBot khác GPTBot thế nào?</h2>
+      <p>Xem chi tiết tại <a href="oai-searchbot-la-gi.html">OAI-SearchBot là gì</a>. Tóm lại: <strong>OAI-SearchBot phục vụ search, GPTBot phục vụ training</strong>. Bạn có thể mở search nhưng chặn training.</p>
+
+      <h2>Mẫu robots.txt cơ bản</h2>
+      <div class="code-block">
+<pre><code>User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
+</code></pre>
+      </div>
+
+      <h2>Mẫu robots.txt nếu muốn chặn training nhưng vẫn cho search</h2>
+      <div class="code-block">
+<pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+</code></pre>
+      </div>
+
+      <h2>Lỗi thường gặp</h2>
+      <ul class="bullet-list">
+        <li>chặn OAI-SearchBot trong robots.txt</li>
+        <li>WAF/CDN chặn bot dù robots.txt đã allow</li>
+        <li>để nội dung chính sau JS nặng</li>
+        <li>trang mỏng, không trả lời trực tiếp câu hỏi</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>robots.txt là gì?</summary>
+          <p>File ở gốc domain quy định bot nào được phép crawl.</p>
+        </details>
+        <details>
+          <summary>Nên mở bot nào?</summary>
+          <p>Nên mở Googlebot, OAI-SearchBot và PerplexityBot nếu mục tiêu là AI search visibility.</p>
+        </details>
+        <details>
+          <summary>Lỗi thường gặp khi nào?</summary>
+          <p>Chặn nhầm OAI-SearchBot hoặc để nội dung chính sau JS nặng.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="oai-searchbot-la-gi.html">Đọc tiếp: OAI-SearchBot là gì?</a>
+        <a class="btn btn-secondary" href="checklist.html">Mở checklist 30 ngày</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 14-07-2026</p>
+      </div>
+      <div>
+        <a href="oai-searchbot-la-gi.html">OAI-SearchBot là gì?</a>
+        <a href="llms-txt-co-can-khong.html">llms.txt có cần không</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

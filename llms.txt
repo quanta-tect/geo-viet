@@ -7,8 +7,13 @@
 
 ## Important pages
 - /index.html: Trang trụ cột về GEO, ChatGPT Search, Google AI, Perplexity.
+- /about.html: Giới thiệu site GEO Việt Nam và mục tiêu.
+- /contact.html: Liên hệ, góp ý và báo lỗi.
+- /privacy.html: Chính sách riêng tư tối giản.
 - /geo-la-gi.html: Bài nền tảng giải thích GEO.
+- /seo-vs-geo-vs-aeo.html: So sánh SEO, GEO và AEO.
 - /oai-searchbot-la-gi.html: Hướng dẫn lên ChatGPT Search bằng OAI-SearchBot.
+- /robots-txt-cho-ai-crawler.html: Mẫu robots.txt cho AI crawler.
 - /llms-txt-co-can-khong.html: Phân tích thực tế về llms.txt.
 - /checklist.html: Checklist GEO 30 ngày cho site mới.
 - /tool.html: Tool tạo prompt audit GEO miễn phí.
