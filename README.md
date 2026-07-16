@@ -51,15 +51,31 @@ git push -u origin main
 ```
 Sau đó bật Pages như ở Cách 1.
 
-## Sau khi publish nên làm ngay
+Sau khi publish nên làm ngay
 1. Thêm site vào **Google Search Console**
 2. Submit `sitemap.xml`
 3. Thêm site vào **Bing Webmaster Tools**
 4. Submit `sitemap.xml`
 5. Publish tiếp 5–10 bài long-tail đầu tiên
 6. Cập nhật ngày sửa đổi mỗi khi refresh nội dung
+7. (Tùy chọn) Ping IndexNow khi có URL mới để Bing crawl nhanh hơn. Xem `indexnow-setup.md` để biết key và endpoint.
 
-## Gợi ý 10 bài nên viết tiếp
+## IndexNow
+File key đang nằm ở root của repo:
+
+```text
+1fafe5e3047fae5502b4a3d3709aa581.txt
+```
+
+URL ping thủ công khi có bài mới:
+
+```text
+https://www.bing.com/indexnow?url=FULL_URL&key=1fafe5e3047fae5502b4a3d3709aa581
+```
+
+Thay `FULL_URL` bằng URL đầy đủ của bài mới. Chi tiết xem `indexnow-setup.md`.
+
+## Khi mua domain riêng
 1. `geo-la-gi`
 2. `cach-len-chatgpt-search`
 3. `oai-searchbot-la-gi`

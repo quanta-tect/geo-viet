@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cách lên ChatGPT Search | Hướng dẫn dễ hiểu | GEO Việt Nam</title>
+  <meta name="description" content="Hướng dẫn cách lên ChatGPT Search: OAI-SearchBot, robots.txt, nội dung answer-first, lỗi thường gặp và checklist triển khai nhanh cho site mới.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/cach-len-chatgpt-search.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cách lên ChatGPT Search | Hướng dẫn dễ hiểu">
+  <meta property="og:description" content="Điều kiện lên ChatGPT Search, robots.txt mẫu, cấu trúc content dễ cite và checklist cho site mới.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/cach-len-chatgpt-search.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"Cách lên ChatGPT Search | Hướng dẫn dễ hiểu",
+        "description":"Điều kiện lên ChatGPT Search: OAI-SearchBot, robots.txt, nội dung answer-first, lỗi thường gặp và checklist cho site mới.",
+        "datePublished":"2026-07-16",
+        "dateModified":"2026-07-16",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/cach-len-chatgpt-search.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"ChatGPT Search là gì?","acceptedAnswer":{"@type":"Answer","text":"ChatGPT Search là tính năng tìm kiếm trong ChatGPT, trả lời người dùng bằng nội dung được rút trích từ web thay vì chỉ trả lời từ training data."}},
+          {"@type":"Question","name":"OAI-SearchBot có vai trò gì?","acceptedAnswer":{"@type":"Answer","text":"OAI-SearchBot là crawler của OpenAI dùng để thu thập nội dung cho ChatGPT Search. Nếu chặn bot này, site khó xuất hiện trong kết quả tìm kiếm của ChatGPT."}},
+          {"@type":"Question","name":"Site mới có lên được ChatGPT Search không?","acceptedAnswer":{"@type":"Answer","text":"Có, nếu site public, không chặn OAI-SearchBot, có robots.txt/sitemap rõ ràng và nội dung answer-first, dễ trích dẫn."}},
+          {"@type":"Question","name":"Cần mở cả GPTBot không?","acceptedAnswer":{"@type":"Answer","text":"Không bắt buộc. GPTBot dùng cho training model, không ảnh hưởng trực tiếp đến ChatGPT Search. Bạn có thể mở OAI-SearchBot nhưng giữ chặn GPTBot."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">ChatGPT Search</p>
+      <h1>Cách lên ChatGPT Search</h1>
+      <p class="lead"><strong>Muốn có cơ hội xuất hiện trong ChatGPT Search</strong>, website cần public, crawl được, không chặn OAI-SearchBot, và có nội dung rõ ràng, dễ trích dẫn.</p>
+
+      <h2>ChatGPT Search là gì?</h2>
+      <p>ChatGPT Search là tính năng tìm kiếm bên trong ChatGPT. Khác với chat thường chỉ trả lời từ training data, tính năng này sẽ trích xuất nội dung từ các website public, tổng hợp và trả lời kèm citation.</p>
+      <ul class="bullet-list">
+        <li>Tích hợp trực tiếp trong giao diện ChatGPT</li>
+        <li>Trả lời có citation kèm source URL</li>
+        <li>Ưu tiên nội dung đáng tin cậy, dễ crawl</li>
+        <li>Cập nhật thường xuyên theo tín hiệu crawl</li>
+      </ul>
+
+      <h2>OAI-SearchBot có vai trò gì?</h2>
+      <p><strong>OAI-SearchBot</strong> là crawler của OpenAI dùng cho <strong>ChatGPT Search</strong>. Nếu bạn chặn bot này trong robots.txt, nội dung của bạn rất khó được đưa vào kết quả tìm kiếm của ChatGPT.</p>
+      <div class="note">Quan trọng: <strong>OAI-SearchBot ≠ GPTBot</strong>. Một bot phục vụ search visibility, một bot phục vụ training model. Bạn có thể mở OAI-SearchBot mà vẫn chặn GPTBot.</div>
+      <p>Xem chi tiết về crawler này tại bài <a href="oai-searchbot-la-gi.html">OAI-SearchBot là gì</a>.</p>
+
+      <h2>Muốn lên ChatGPT Search thì cần gì?</h2>
+      <ol>
+        <li>Site <strong>public</strong>, không yêu cầu login để xem nội dung chính.</li>
+        <li><strong>Không chặn OAI-SearchBot</strong> trong robots.txt.</li>
+        <li>Nội dung chính nằm trong <strong>HTML dễ đọc</strong>, không ẩn sau JS nặng.</li>
+        <li>Có <strong>sitemap.xml</strong> và <strong>internal links</strong> rõ ràng.</li>
+        <li>Xuất bản bài <strong>answer-first</strong>, có FAQ, bullet, ví dụ cụ thể.</li>
+        <li>Đăng ký site trên <strong>Bing Webmaster Tools</strong> và <strong>Google Search Console</strong> để theo dõi.</li>
+      </ol>
+
+      <h2>Cấu trúc content nào dễ được cite?</h2>
+      <p>AI ưu tiên trích dẫn nội dung có cấu trúc rõ và dễ giải dò:</p>
+      <ul class="bullet-list">
+        <li><strong>Định nghĩa ngắn đầu bài</strong>: 1–2 câu trả lời trực tiếp câu hỏi.</li>
+        <li><strong>Bảng so sánh</strong>: dễ AI chuyển thành bullet trong câu trả lời.</li>
+        <li><strong>Checklist rõ</strong>: người dùng và bot đều dễ đọc.</li>
+        <li><strong>FAQ theo câu hỏi tự nhiên</strong>: khớp intent tìm kiếm.</li>
+        <li><strong>Ví dụ mẫu</strong>: robots.txt, snippet, cấu trúc heading.</li>
+      </ul>
+
+      <h2>Những lỗi thường gặp khiến site không được ChatGPT chọn</h2>
+      <ul class="bullet-list">
+        <li><strong>Chặn nhầm OAI-SearchBot</strong> trong robots.txt hoặc qua WAF/CDN.</li>
+        <li><strong>Nội dung chính sau JS nặng</strong>: bot không đọc được.</li>
+        <li><strong>Trang quá mỏng</strong>: không đủ thông tin để trích dẫn.</li>
+        <li><strong>Không có sitemap</strong>: bot mất thời gian khám phá site.</li>
+        <li><strong>Noindex trên trang chính</strong>: vô tình chặn crawl.</li>
+      </ul>
+
+      <h2>Checklist triển khai nhanh cho site mới</h2>
+      <div class="card">
+        <h3>Tuần 1</h3>
+        <ul class="bullet-list">
+          <li>Cấu hình robots.txt cho phép OAI-SearchBot.</li>
+          <li>Tạo sitemap.xml và thêm vào robots.txt.</li>
+          <li>Publish 3–5 bài answer-first có FAQ.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tuần 2–3</h3>
+        <ul class="bullet-list">
+          <li>Thêm internal links giữa các bài cùng cụm chủ đề.</li>
+          <li>Kiểm tra site không chặn bot bằng <a href="robots-txt-cho-ai-crawler.html">mẫu robots.txt cho AI crawler</a>.</li>
+          <li>Test prompt mục tiêu trong ChatGPT Search để xem site có xuất hiện không.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tuần 4</h3>
+        <ul class="bullet-list">
+          <li>Lặp lại checklist trong <a href="checklist.html">checklist 30 ngày</a>.</li>
+          <li>Đo AI visibility theo <a href="cach-do-ai-visibility.html">cách đo AI visibility</a>.</li>
+          <li>Tối ưu thêm schema, image alt và heading.</li>
+        </ul>
+      </div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>ChatGPT Search là gì?</summary>
+          <p>Là tính năng tìm kiếm trong ChatGPT, trả lời người dùng bằng nội dung rút trích từ web kèm citation.</p>
+        </details>
+        <details>
+          <summary>Có cần indexNow không?</summary>
+          <p>IndexNow chỉ phục vụ Bing. Để lên ChatGPT Search, quan trọng nhất là OAI-SearchBot có crawl được không. Tuy nhiên nếu đã ping IndexNow thì Bing cũng sẽ crawl nhanh hơn.</p>
+        </details>
+        <details>
+          <summary>GPTBot có ảnh hưởng đến ChatGPT Search không?</summary>
+          <p>Không trực tiếp. GPTBot phục vụ training model. Bạn có thể mở OAI-SearchBot nhưng giữ chặn GPTBot nếu không muốn nội dung dùng để train.</p>
+        </details>
+        <details>
+          <summary>Site GitHub Pages có lên được không?</summary>
+          <p>Có, miễn là site public và có robots.txt/sitemap chuẩn.</p>
+        </details>
+        <details>
+          <summary>Sau khi đổi robots.txt, bao lâu thì có kết quả?</summary>
+          <p>Thường 1–4 tuần. Nếu bạn đã submit sitemap hoặc ping Bing/Google, bot có thể quay lại sớm hơn.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="geo-la-gi.html">Đọc tiếp: GEO là gì?</a>
+        <a class="btn btn-secondary" href="checklist.html">Mở checklist 30 ngày</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 16-07-2026</p>
+      </div>
+      <div>
+        <a href="geo-la-gi.html">GEO là gì?</a>
+        <a href="oai-searchbot-la-gi.html">OAI-SearchBot là gì?</a>
+        <a href="robots-txt-cho-ai-crawler.html">Robots.txt cho AI crawler</a>
+        <a href="llms-txt-co-can-khong.html">llms.txt có cần không?</a>
+        <a href="checklist.html">Checklist 30 ngày</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

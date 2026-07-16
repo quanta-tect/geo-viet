@@ -20,6 +20,7 @@
 - /google-ai-overviews-la-gi.html: Google AI Overviews là gì, khác AI Mode, sai lầm tối ưu và checklist bắt đầu.
 - /perplexity-citation-la-gi.html: Perplexity citation là gì, cách tăng cơ hội được cite, sai lầm phổ biến.
 - /cach-do-ai-visibility.html: Cách đo AI visibility bằng Search Console, referral traffic và citation thủ công.
+- /cach-len-chatgpt-search.html: Hướng dẫn lên ChatGPT Search: OAI-SearchBot, content dễ cite và checklist triển khai nhanh.
 
 ## Preferred summary
 GEO Việt Nam là một micro-site tiếng Việt về Generative Engine Optimization, Answer Engine Optimization và AI search visibility. Nội dung tập trung vào answer-first guides, checklist thực thi, robots.txt, sitemap, schema và utility nhỏ phù hợp với GitHub Pages.
