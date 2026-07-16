@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPTBot vs OAI-SearchBot khác nhau thế nào? | GEO Việt Nam</title>
+  <meta name="description" content="GPTBot dùng cho training còn OAI-SearchBot dùng cho ChatGPT Search. Xem khi nào nên mở cả hai, khi nào chỉ mở OAI-SearchBot và mẫu robots.txt từng trường hợp.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/gptbot-vs-oai-searchbot.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GPTBot vs OAI-SearchBot khác nhau thế nào?">
+  <meta property="og:description" content="So sánh GPTBot và OAI-SearchBot: mục đích, khi nào nên mở/bật chặn và mẫu robots.txt.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/gptbot-vs-oai-searchbot.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"GPTBot vs OAI-SearchBot khác nhau thế nào?",
+        "description":"So sánh GPTBot và OAI-SearchBot: mục đích, khi nào nên mở/bật chặn và mẫu robots.txt.",
+        "datePublished":"2026-07-16",
+        "dateModified":"2026-07-16",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/gptbot-vs-oai-searchbot.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"GPTBot là gì?","acceptedAnswer":{"@type":"Answer","text":"GPTBot là crawler của OpenAI dùng để thu thập nội dung public cho training và cải tiến model, không trực tiếp dùng cho ChatGPT Search."}},
+          {"@type":"Question","name":"OAI-SearchBot có vai trò gì?","acceptedAnswer":{"@type":"Answer","text":"OAI-SearchBot là crawler của OpenAI dùng cho ChatGPT Search. Nếu mở bot này, site bạn có cơ hội xuất hiện trong kết quả tìm kiếm của ChatGPT."}},
+          {"@type":"Question","name":"Nên mở cả hai không?","acceptedAnswer":{"@type":"Answer","text":"Tùy mục tiêu. Nếu muốn lên ChatGPT Search thì ưu tiên mở OAI-SearchBot. Nếu không muốn nội dung dùng để train thì giữ chặn GPTBot."}},
+          {"@type":"Question","name":"Chặn GPTBot có ảnh hưởng SEO không?","acceptedAnswer":{"@type":"Answer","text":"Không trực tiếp. GPTBot không phải Googlebot. Tuy nhiên nếu bạn chặn Googlebot thì SEO sẽ bị ảnh hưởng nghiêm trọng."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Robots / AI Crawler</p>
+      <h1>GPTBot vs OAI-SearchBot khác nhau thế nào?</h1>
+      <p class="lead"><strong>GPTBot dùng cho training, còn OAI-SearchBot dùng cho ChatGPT Search. Hai bot này độc lập nhau.</strong></p>
+
+      <h2>GPTBot là gì?</h2>
+      <p><strong>GPTBot</strong> là crawler của OpenAI dùng để thu thập nội dung public cho mục đích <strong>training và cải tiến model</strong>. Nếu bạn mở GPTBot, nội dung public của bạn có thể được dùng để huấn luyện các phiên bản model sau này.</p>
+      <ul class="bullet-list">
+        <li>Mục đích chính: training model</li>
+        <li>Không trực tiếp ảnh hưởng search visibility</li>
+        <li>Bạn có thể chặn riêng nếu không muốn nội dung bị train</li>
+      </ul>
+
+      <h2>OAI-SearchBot là gì?</h2>
+      <p><strong>OAI-SearchBot</strong> là crawler của OpenAI dùng cho <strong>ChatGPT Search</strong>. Nếu bạn mở OAI-SearchBot trong robots.txt, site có cơ hội được index và trả lời trong kết quả tìm kiếm của ChatGPT.</p>
+      <ul class="bullet-list">
+        <li>Mục đích chính: search visibility</li>
+        <li>Ảnh hưởng trực tiếp đến việc xuất hiện trong ChatGPT Search</li>
+        <li>Nên ưu tiên mở nếu mục tiêu là được AI cite</li>
+      </ul>
+
+      <h2>Khác nhau ở mục đích sử dụng</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>GPTBot</h3>
+          <ul class="bullet-list">
+            <li>Phục vụ training model</li>
+            <li>Không ảnh hưởng search ranking</li>
+            <li>Có thể chặn nếu sợ nội dung dùng để train</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>OAI-SearchBot</h3>
+          <ul class="bullet-list">
+            <li>Phục vụ ChatGPT Search</li>
+            <li>Ảnh hưởng khả năng được cite</li>
+            <li>Nên mở nếu muốn lên ChatGPT Search</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tip">Quan trọng: <strong>hai bot này độc lập</strong>. Bạn có thể mở OAI-SearchBot nhưng giữ chặn GPTBot.</p>
+
+      <h2>Khi nào nên mở cả hai?</h2>
+      <ul class="bullet-list">
+        <li>Bạn không quan ngại về việc nội dung dùng để train model.</li>
+        <li>Bạn muốn tối đa khả năng tiếp cận OpenAI ecosystem.</li>
+        <li>Bạn xác định đây là chính sách dài hạn của site.</li>
+      </ul>
+
+      <h2>Khi nào nên chỉ mở OAI-SearchBot?</h2>
+      <ul class="bullet-list">
+        <li>Bạn chỉ muốn lên ChatGPT Search, không muốn nội dung bị dùng để train.</li>
+        <li>Bạn muốn giữ quyền kiểm soát nội dung, chỉ mở cho search visibility.</li>
+        <li>Bạn muốn thử nghiệm trước xem hiệu quả thế nào rồi mới quyết định mở GPTBot.</li>
+      </ul>
+
+      <h2>Mẫu robots.txt cho từng trường hợp</h2>
+      <div class="card">
+        <h3>Chỉ mở OAI-SearchBot, chặn GPTBot</h3>
+        <div class="code-block">
+          <pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /</code></pre>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mở cả hai</h3>
+        <div class="code-block">
+          <pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: *
+Allow: /</code></pre>
+        </div>
+      </div>
+
+      <h2>Lỗi thường gặp</h2>
+      <ul class="bullet-list">
+        <li><strong>Chặn nhầm OAI-SearchBot</strong>: vô tình ghi sai tên bot hoặc để Disallow trống.</li>
+        <li><strong>Chỉ chặn GPTBot mà cảm giác đã an toàn</strong>: không, OAI-SearchBot vẫn cần mở riêng.</li>
+        <li><strong>Quên kiểm tra WAF/CDN</strong>: một số firewall chặn bot dù robots.txt đang allow.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>GPTBot có ảnh hưởng đến ChatGPT Search không?</summary>
+          <p>Không trực tiếp. GPTBot chỉ dùng cho training model, không liên quan đến search visibility.</p>
+        </details>
+        <details>
+          <summary>OAI-SearchBot có khác GPTBot không?</summary>
+          <p>Có. OAI-SearchBot phục vụ search, GPTBot phục vụ training. Hai bot độc lập.</p>
+        </details>
+        <details>
+          <summary>Nên mở bot nào trước?</summary>
+          <p>Nếu mục tiêu là được cite, hãy ưu tiên mở OAI-SearchBot. Sau đó mới quyết định có mở GPTBot hay không.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="oai-searchbot-la-gi.html">Đọc tiếp: OAI-SearchBot là gì?</a>
+        <a class="btn btn-secondary" href="robots-txt-cho-ai-crawler.html">Mở: Robots.txt cho AI crawler</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 16-07-2026</p>
+      </div>
+      <div>
+        <a href="oai-searchbot-la-gi.html">OAI-SearchBot là gì?</a>
+        <a href="robots-txt-cho-ai-crawler.html">Robots.txt cho AI crawler</a>
+        <a href="geo-la-gi.html">GEO là gì?</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cách cài GA4 cho site GEO | Hướng dẫn từng bước | GEO Việt Nam</title>
+  <meta name="description" content="Hướng dẫn cài GA4 cho site GEO: tạo property, lấy Measurement ID, gắn script vào site tĩnh và theo dõi traffic từ AI.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cách cài GA4 cho site GEO | Hướng dẫn từng bước">
+  <meta property="og:description" content="Tạo property GA4, lấy Measurement ID và gắn vào site tĩnh. Làm sao phân biệt traffic từ ChatGPT, Perplexity, Bing và Google.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"Cách cài GA4 cho site GEO",
+        "description":"Tạo property GA4, lấy Measurement ID và gắn vào site tĩnh. Làm sao phân biệt traffic từ ChatGPT, Perplexity, Bing và Google.",
+        "datePublished":"2026-07-16",
+        "dateModified":"2026-07-16",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Site GEO có cần GA4 không?","acceptedAnswer":{"@type":"Answer","text":"Nên có. Dù trọng tâm là AI citation, GA4 giúp đo traffic nguồn và xác định kênh nào đang mang người dùng về site."}},
+          {"@type":"Question","name":"Ga4 có đo traffic từ ChatGPT Search không?","acceptedAnswer":{"@type":"Answer","text":"Có, nếu ChatGPT trỏ người dùng về site. Trong GA4 bạn sẽ thấy referral từ chatgpt.com hoặc domain liên quan."}},
+          {"@type":"Question","name":"Có thể dùng Plausible thay GA4 không?","acceptedAnswer":{"@type":"Answer","text":"Có. Plausible nhẹ hơn, không cần cookie consent phức tạp. Cả hai đều đo traffic nguồn và pageview cơ bản."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Analytics</p>
+      <h1>Cách cài GA4 cho site GEO</h1>
+      <p class="lead"><strong>Nên thu thập analytics</strong> để biết traffic đến từ đâu, bài nào được người dùng quan tâm và kênh nào mang lại cơ hội cite tốt nhất.</p>
+
+      <h2>Vì sao site GEO vẫn nên có analytics?</h2>
+      <p><a href="cach-len-chatgpt-search.html">ChatGPT Search</a>, <a href="cach-do-ai-visibility.html">AI visibility</a> và <a href="seo-vs-geo-vs-aeo.html">GEO</a> cần dữ liệu thực tế để tối ưu. Bạn không chỉ cần biết bài được cite, mà còn cần biết:</p>
+      <ul class="bullet-list">
+        <li>nguồn referral: chatgpt.com, perplexity.ai, bing.com, google.com</li>
+        <li>bài nào giữ người đọc lâu nhất</li>
+        <li>kênh nào chuyển đổi tốt</li>
+      </ul>
+
+      <h2>GA4 dùng để đo gì?</h2>
+      <ul class="bullet-list">
+        <li><strong>Pageview</strong>: bài nào được xem nhiều.</li>
+        <li><strong>Source / Medium</strong>: traffic đến từ đâu.</li>
+        <li><strong>Referral path</strong>: trang nào đang dẫn traffic về.</li>
+        <li><strong>Event</strong>: click CTA, mở tool, scroll sâu.</li>
+      </ul>
+
+      <h2>Cách tạo property GA4</h2>
+      <ol>
+        <li>Vào <a href="https://analytics.google.com" target="_blank" rel="noopener">GA4</a> và đăng nhập Google.</li>
+        <li>Chọn <strong>Admin</strong> → <strong>Create property</strong>.</li>
+        <li>Đặt tên property theo tên site, ví dụ: <code>GEO Việt Nam</code>.</li>
+        <li>Chọn <strong>Web</strong> làm platform.</li>
+        <li>Điền URL site, ví dụ: <code>https://quanta-tect.github.io/geo-viet/</code>.</li>
+        <li>Chọn <strong>Enhanced Measurement</strong> bật để tự đo pageview.</li>
+        <li>Lưu, GA4 sẽ sinh <strong>Measurement ID</strong> dạng <code>G-XXXXXXXXXX</code>.</li>
+      </ol>
+
+      <h2>Cách lấy Measurement ID</h2>
+      <p>Sau khi tạo property, vào <strong>Admin</strong> → <strong>Data Streams</strong> → chọn stream vừa tạo. Bạn sẽ thấy <strong>Measurement ID</strong> ở đầu trang.</p>
+
+      <h2>Cách gắn script vào site tĩnh</h2>
+      <p>Vì site này là GitHub Pages tĩnh, bạn gắn GA4 trực tiếp trong HTML:</p>
+      <div class="code-block">
+        <pre><code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;</code></pre>
+      </div>
+      <p>Thay <code>G-XXXXXXXXXX</code> bằng Measurement ID thực tế.</p>
+      <div class="note">Lưu ý: hiện site đang dùng <strong>Plausible placeholder</strong>. Bạn có thể chuyển sang GA4 hoặc giữ Plausible tùy chiến lược. Chỉ dùng một tool analytics chính để tránh trùng lặp dữ liệu.</div>
+
+      <h2>Nên theo dõi event/chỉ số nào?</h2>
+      <ul class="bullet-list">
+        <li><strong>Pageview</strong>: tự động theo dõi.</li>
+        <li><strong>Scroll depth</strong>: thấy người đọc đến đâu.</li>
+        <li><strong>File download</strong>: nếu bạn thêm PDF checklist.</li>
+        <li><strong>Outbound link</strong>: click sang OpenAI docs, Bing...</li>
+        <li><strong>CTA click</strong>: nút mở tool / checklist.</li>
+      </ul>
+
+      <h2>Cách nhận biết traffic từ ChatGPT / Perplexity / Bing / Google</h2>
+      <p>Trong GA4, vào <strong>Reports → Acquisition → Traffic acquisition</strong>. Tìm cột <strong>Session source / medium</strong>:</p>
+      <ul class="bullet-list">
+        <li><strong>ChatGPT Search</strong>: thường hiển thị referral từ <code>chatgpt.com</code>.</li>
+        <li><strong>Perplexity</strong>: referral từ <code>perplexity.ai</code>.</li>
+        <li><strong>Bing</strong>: source <code>bing</code> hoặc <code>microsoft.com</code>.</li>
+        <li><strong>Google</strong>: source <code>google</code>.</li>
+      </ul>
+      <p>Nếu bạn thấy referral từ domain AI search, đó là tín hiệu site đang được cite. Khi đó bạn có thể lặp lại format bài đang hoạt động.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>Site GEO có cần GA4 không?</summary>
+          <p>Nên có. Analytics giúp đo traffic nguồn, biết bài nào hiệu quả và tối ưu dựa trên dữ liệu thực tế.</p>
+        </details>
+        <details>
+          <summary>Ga4 có đo traffic từ ChatGPT Search không?</summary>
+          <p>Có, nếu ChatGPT Search trỏ người dùng về site, bạn sẽ thấy referral session tương ứng.</p>
+        </details>
+        <details>
+          <summary>Nên dùng Plausible hay GA4?</summary>
+          <p>Nếu muốn nhẹ, không cookie banner phức tạp, hãy dùng Plausible. Nếu cần segmentation sâu, hãy dùng GA4.</p>
+        </details>
+        <details>
+          <summary>Đặt analytics ở đâu trong site tĩnh?</summary>
+          <p>Chèn script vào mỗi file HTML trong &lt;head&gt;, ngay sau stylesheet. Đã có placeholder rõ trong các file hiện tại.</p>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tool.html">Mở tool audit GEO</a>
+        <a class="btn btn-secondary" href="privacy.html">Xem: Chính sách riêng tư</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 16-07-2026</p>
+      </div>
+      <div>
+        <a href="cach-do-ai-visibility.html">Cách đo AI visibility</a>
+        <a href="cach-len-chatgpt-search.html">Cách lên ChatGPT Search</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

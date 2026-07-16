@@ -87,6 +87,11 @@ Thay `FULL_URL` bằng URL đầy đủ của bài mới. Chi tiết xem `indexn
 9. `google-ai-overviews-la-gi`
 10. `schema-faq-cho-geo`
 
+## Analytics
+Toàn bộ site hiện đang dùng <strong>Plausible analytics placeholder</strong>. Bạn có thể thay bằng GA4 measurement ID sau này nếu muốn.
+
+File kế hoạch distribution đang nằm ở root: `DISTRIBUTION_PLAN.md`.
+
 ## Khi mua domain riêng
 Sau này nếu bạn mua domain:
 1. Tạo file `CNAME` chứa đúng domain của bạn, ví dụ:
