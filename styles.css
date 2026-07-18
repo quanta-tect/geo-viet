@@ -64,6 +64,29 @@ a:hover { text-decoration: underline; }
 .footer-grid { grid-template-columns: 2fr 1fr; }
 .two-col { grid-template-columns: repeat(2, 1fr); }
 .tool-grid { grid-template-columns: .95fr 1.05fr; align-items: start; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.step { position: relative; }
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(108,182,255,.14);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.article-grid.compact { grid-template-columns: repeat(3, 1fr); }
+.link-cta {
+  display: inline-block;
+  margin-top: 10px;
+  color: #9fd2ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.link-cta:hover { text-decoration: underline; }
 .eyebrow {
   display: inline-block;
   margin: 0 0 10px;

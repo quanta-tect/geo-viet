@@ -87,6 +87,17 @@ Thay `FULL_URL` bằng URL đầy đủ của bài mới. Chi tiết xem `indexn
 9. `google-ai-overviews-la-gi`
 10. `schema-faq-cho-geo`
 
+## Phases đã hoàn thành
+- Phase 6 polish: homepage có section "Bắt đầu từ đâu" + "Những bài nên đọc trước".
+- Internal linking audit: 13/13 bài content có "Đọc tiếp" / "Bài liên quan".
+- Schema / metadata: Article + FAQPage chuẩn, `inLanguage=vi`, canonical đúng.
+- Content roadmap: `NEXT_10_ARTICLES.md` với 10 bài tiếp theo, 3 bài ưu tiên cao.
+- Internal linking audit: `INTERNAL_LINKING_AUDIT.md`.
+
+## Files đã có
+- `INTERNAL_LINKING_AUDIT.md` — audit internal linking toàn site.
+- `NEXT_10_ARTICLES.md` — roadmap 10 bài tiếp theo.
+
 ## Analytics
 Toàn bộ site hiện đang dùng <strong>Plausible analytics placeholder</strong>. Bạn có thể thay bằng GA4 measurement ID sau này nếu muốn.
 
