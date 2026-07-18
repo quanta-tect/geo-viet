@@ -97,6 +97,7 @@ Thay `FULL_URL` bằng URL đầy đủ của bài mới. Chi tiết xem `indexn
 ## Files đã có
 - `INTERNAL_LINKING_AUDIT.md` — audit internal linking toàn site.
 - `NEXT_10_ARTICLES.md` — roadmap 10 bài tiếp theo.
+- Phase 7: thêm 3 bài ưu tiên cao: `cach-kiem-tra-perplexity-citation.html`, `ga4-cho-site-geo-bao-cao.html`, `llms-txt-best-practice-2026.html`.
 
 ## Analytics
 Toàn bộ site hiện đang dùng <strong>Plausible analytics placeholder</strong>. Bạn có thể thay bằng GA4 measurement ID sau này nếu muốn.

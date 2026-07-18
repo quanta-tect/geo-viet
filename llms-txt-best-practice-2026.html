@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>llms.txt best practice 2026 | GEO Việt Nam</title>
+  <meta name="description" content="Best practice llms.txt 2026: mẫu chuẩn cho site content tiếng Việt, khi nào nên thêm, cách update khi có bài mới, sai lầm cần tránh.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/llms-txt-best-practice-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="llms.txt best practice 2026 | GEO Việt Nam">
+  <meta property="og:description" content="Best practice llms.txt 2026: mẫu chuẩn cho site content tiếng Việt, khi nào nên thêm, cách update khi có bài mới và sai lầm cần tránh.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/llms-txt-best-practice-2026.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"llms.txt best practice 2026",
+        "description":"llms.txt không phải đòn bẩy thần kỳ cho Google, nhưng vẫn có thể là file phụ trợ hữu ích nếu bạn muốn mô tả các trang quan trọng cho agent và workflow ngoài Search truyền thống.",
+        "datePublished":"2026-07-18",
+        "dateModified":"2026-07-18",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/llms-txt-best-practice-2026.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"llms.txt có ảnh hưởng Google Search không?",
+            "acceptedAnswer":{"@type":"Answer","text":"Không trực tiếp. Hiện Google chưa xác nhận dùng llms.txt làm tín hiệu rank chính."}
+          },
+          {
+            "@type":"Question",
+            "name":"Cấu trúc tối thiểu của llms.txt ra sao?",
+            "acceptedAnswer":{"@type":"Answer","text":"Bắt đầu bằng phần /llms.txt, sau đó danh sách sections, rules và recommended URLs. Giữ nhẹ, dễ đọc, cập nhật khi có bài mới."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Guide</p>
+      <h1>llms.txt best practice 2026</h1>
+      <p class="lead">llms.txt không phải đòn bẩy thần kỳ cho Google, nhưng vẫn có thể là file phụ trợ hữu ích nếu bạn muốn mô tả các trang quan trọng cho agent và workflow ngoài Search truyền thống.</p>
+
+      <h2>llms.txt có vai trò gì trong 2026?</h2>
+      <p>File giúp bot và agent hiểu cấu trúc site nhanh hơn, đặc biệt khi bạn dùng tool hỗ trợ llms.txt hoặc quy trình AI tóm tắt lộ trình crawl.</p>
+
+      <h2>Khi nào nên thêm llms.txt?</h2>
+      <ul class="bullet-list">
+        <li>Site có nhiều intents khác nhau và cần agent hiểu mối liên kết giữa các trang.</li>
+        <li>Bạn cần hướng dẫn crawler theo độ ưu tiên mà không dùng robots.txt.</li>
+        <li>Mục tiêu là ChatGPT Search, Perplexity, Copilot hoặc internal AI workflow.</li>
+      </ul>
+
+      <h2>Khi nào không cần quá bận tâm?</h2>
+      <ul class="bullet-list">
+        <li>Site nhỏ, dưới 20 trang, crawl đã tốt.</li>
+        <li>Bạn chưa có đủ nội dung đa dạng; liên kết nội bộ chuẩn sẽ quan trọng hơn.</li>
+        <li>Mục tiêu chính là SEO Google thuần túy.</li>
+      </ul>
+
+      <h2>Mẫu llms.txt chuẩn cho site content nhỏ</h2>
+      <p>Dùng dạng đơn giản: tiêu đề file, purpose, priority sections, rules, recommended URLs. Giữ cấu trúc dễ đọc.</p>
+      <pre><code>/llms.txt
+Purpose: Hướng dẫn crawl cho các AI agent
+Priority pages:
+- /geo-la-gi.html
+- /cach-len-chatgpt-search.html
+- /checklist.html
+
+Rules:
+- Allow: /
+- Disallow: /private/
+- Crawl-delay: 0
+
+Recommended URLs:
+- /robots-txt-cho-ai-crawler.html
+- /cach-do-ai-visibility.html
+</code></pre>
+
+      <h2>Cách cập nhật llms.txt khi có bài mới</h2>
+      <ol class="bullet-list">
+        <li>Thêm slug bài mới vào Recommended URLs nếu là bài trụ cột.</li>
+        <li>Cập nhật mục Purpose nếu bạn chuyển sang cluster mới.</li>
+        <li>Commit llms.txt cùng mỗi lần đăng bài mới.</li>
+      </ol>
+
+      <h2>Sai lầm phổ biến</h2>
+      <ul class="bullet-list">
+        <li>Để llms.txt quá dài; agent thường đọc nhanh, giữ dưới 1–2 trang.</li>
+        <li>Nhầm lẫn llms.txt với robots.txt: llms.txt không chặn crawl.</li>
+        <li>Không cập nhật khi có bài mới: file cũ làm agent bỏ sót cluster mới.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>llms.txt có ảnh hưởng Google Search không?</summary>
+          <p>Không trực tiếp. Hiện Google chưa xác nhận dùng llms.txt làm tín hiệu rank chính.</p>
+        </details>
+        <details>
+          <summary>Cấu trúc tối thiểu của llms.txt ra sao?</summary>
+          <p>Bắt đầu bằng phần /llms.txt, sau đó sections, rules và recommended URLs. Giữ nhẹ và dễ đọc.</p>
+        </details>
+      </div>
+
+      <h2>Đọc tiếp</h2>
+      <div class="article-grid compact">
+        <a class="article-card" href="llms-txt-co-can-khong.html">
+          <span class="kicker">Phân tích</span>
+          <h3>llms.txt có cần không?</h3>
+          <p>File phụ trợ chi phí thấp, không thay thế robots.txt.</p>
+        </a>
+        <a class="article-card" href="robots-txt-cho-ai-crawler.html">
+          <span class="kicker">Utility</span>
+          <h3>Mẫu robots.txt cho AI crawler</h3>
+          <p>Khi nào mở/bot nào cần phép crawl.</p>
+        </a>
+        <a class="article-card" href="google-ai-overviews-la-gi.html">
+          <span class="kicker">Guide</span>
+          <h3>Google AI Overviews là gì?</h3>
+          <p>Khái niệm tổng hợp AI trong SERP.</p>
+        </a>
+        <a class="article-card" href="google-ai-mode-la-gi.html">
+          <span class="kicker">Guide</span>
+          <h3>Google AI Mode là gì?</h3>
+          <p>AI Mode khác AI Overviews thế nào.</p>
+        </a>
+        <a class="article-card" href="geo-la-gi.html">
+          <span class="kicker">Bài nền tảng</span>
+          <h3>GEO là gì?</h3>
+          <p>Định nghĩa, khác biệt với SEO/AEO và cách bắt đầu cho site mới.</p>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 18-07-2026</p>
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="privacy.html">Chính sách riêng tư</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GA4 cho site GEO: báo cáo referral từ ChatGPT, Perplexity, Bing | GEO Việt Nam</title>
+  <meta name="description" content="Cách đọc referral AI traffic trong GA4: phân biệt ChatGPT, Perplexity, Bing; báo cáo mẫu hàng tuần; sai lầm thường gặp.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo-bao-cao.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GA4 cho site GEO: báo cáo referral từ ChatGPT, Perplexity, Bing | GEO Việt Nam">
+  <meta property="og:description" content="GA4 báo cáo AI traffic: phân biệt ChatGPT, Perplexity, Bing, lọc referral, và mẫu báo cáo nên xem hàng tuần.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo-bao-cao.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"GA4 cho site GEO: báo cáo referral từ ChatGPT, Perplexity, Bing",
+        "description":"Cách đọc referral AI traffic trong GA4, phân biệt ChatGPT, Perplexity, Bing, và báo cáo mẫu hàng tuần.",
+        "datePublished":"2026-07-18",
+        "dateModified":"2026-07-18",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/ga4-cho-site-geo-bao-cao.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Nếu chưa dùng GA4 thì sao?",
+            "acceptedAnswer":{"@type":"Answer","text":"Bạn có thể bắt đầu bằng log thủ công + referral detection cơ bản. Khi cần scale, chuyển sang GA4 hoặc Plausible với custom dimension."}
+          },
+          {
+            "@type":"Question",
+            "name":"Tại sao referral từ AI search thấp?",
+            "acceptedAnswer":{"@type":"Answer","text":"Một số nền tảng không gửi header referral đầy đủ. Bạn nên kết hợp Session source / medium, hostname và thử nghiệm prompt-based tracking."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Analytics</p>
+      <h1>GA4 cho site GEO: báo cáo referral từ ChatGPT, Perplexity, Bing</h1>
+      <p class="lead">Nếu site đang chạy analytics placeholder, bạn vẫn có thể tạo báo cáo mẫu để sẵn sàng khi bật đo lường thực tế. Ưu tiên phân biệt được AI referral với organic Google thường.</p>
+
+      <h2>Vì sao cần báo cáo referral riêng cho AI traffic?</h2>
+      <p>AI search engines đang trở thành kênh discovery mới. Nếu chỉ nhìn organic Google, bạn sẽ bỏ sót traffic từ ChatGPT Search, Perplexity, Bing AI.</p>
+
+      <h2>Nguồn traffic nào nên theo dõi?</h2>
+      <ul class="bullet-list">
+        <li><strong>ChatGPT Search:</strong> thường đi kèm OAI-SearchBot crawl, traffic referral có thể thấp hoặc ẩn.</li>
+        <li><strong>Perplexity:</strong> hostname thường là <code>perplexity.ai</code>; citation có thể kéo referral rõ rệt.</li>
+        <li><strong>Bing / Copilot:</strong> đôi khi gửi header rõ hơn, đặc biệt nếu bạn đăng ký IndexNow.</li>
+        <li><strong>Google AI Overviews / AI Mode:</strong> không dễ đo bằng referral; phụ thuộc Search Console + log thủ công.</li>
+      </ul>
+
+      <h2>Cách xem referral trong GA4</h2>
+      <ol class="bullet-list">
+        <li>Mở <strong>Acquisition > Traffic acquisition</strong>.</li>
+        <li>Thêm dimension <strong>Session source / Session medium</strong>.</li>
+        <li>Lọc theo hostname <code>perplexity.ai</code>, <code>bing.com</code>, <code>chatgpt.com</code>.</li>
+        <li>So sánh với organic search để xem tỷ trọng AI traffic.</li>
+      </ol>
+
+      <h2>Mẫu báo cáo nên xem hàng tuần</h2>
+      <p>Một báo cáo tối thiểu gồm: tổng sessions, sessions theo từng AI source, landing page hàng đầu, thời gian trên page, scroll depth và conversion nếu có.</p>
+
+      <h2>Những sai lầm thường gặp khi đọc dữ liệu GA4 cho GEO</h2>
+      <ul class="bullet-list">
+        <li>Quên kiểm tra cấu hình bot filtering: bot traffic có thể làm sai lệch traffic thật.</li>
+        <li>Chỉ nhìn Users: sessions phù hợp hơn vì AI có thể gửi user quay lại nhiều lần.</li>
+        <li>Không đối chiếu với Search Console: AI traffic thường gieo trong Discover + AI Overviews từ Google.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>Nếu chưa dùng GA4 thì sao?</summary>
+          <p>Bạn có thể bắt đầu bằng log thủ công + referral detection cơ bản. Khi cần scale, chuyển sang GA4 hoặc Plausible với custom dimension.</p>
+        </details>
+        <details>
+          <summary>Tại sao referral từ AI search lại thấp?</summary>
+          <p>Một số nền tảng không gửi header referral đầy đủ. Bạn nên kết hợp Session source / medium, hostname và thử nghiệm prompt-based tracking.</p>
+        </details>
+      </div>
+
+      <h2>Đọc tiếp</h2>
+      <div class="article-grid compact">
+        <a class="article-card" href="ga4-cho-site-geo.html">
+          <span class="kicker">Guide</span>
+          <h3>Cách cài GA4 cho site GEO</h3>
+          <p>Cài measurement, placeholder và kiểm tra events cơ bản.</p>
+        </a>
+        <a class="article-card" href="cach-do-ai-visibility.html">
+          <span class="kicker">Analytics</span>
+          <h3>Cách đo AI visibility</h3>
+          <p>Theo dõi AI referral, citation và impressions.</p>
+        </a>
+        <a class="article-card" href="checklist.html">
+          <span class="kicker">Lộ trình</span>
+          <h3>Checklist GEO 30 ngày</h3>
+          <p>Publish lần đầu, cập nhật nội dung và đo lường.</p>
+        </a>
+        <a class="article-card" href="tool.html">
+          <span class="kicker">Utility</span>
+          <h3>Tool audit GEO</h3>
+          <p>Sinh prompt kiểm tra crawlability + internal link.</p>
+        </a>
+        <a class="article-card" href="privacy.html">
+          <span class="kicker">Legal</span>
+          <h3>Chính sách riêng tư</h3>
+          <p>Khi dùng analytics placeholder, bạn vẫn nên có privacy page.</p>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 18-07-2026</p>
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="privacy.html">Chính sách riêng tư</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

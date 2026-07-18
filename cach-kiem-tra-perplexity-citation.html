@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cách kiểm tra Perplexity citation | GEO Việt Nam</title>
+  <meta name="description" content="Bộ kiểm tra Perplexity citation bằng prompt cố định, bảng theo dõi và công cụ đo referral traffic.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://quanta-tect.github.io/geo-viet/cach-kiem-tra-perplexity-citation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cách kiểm tra Perplexity citation | GEO Việt Nam">
+  <meta property="og:description" content="Kiểm tra citation thủ công bằng prompt cố định, bảng theo dõi hàng tuần, và công cụ đo REFERRAL từ perplexity.ai.">
+  <meta property="og:url" content="https://quanta-tect.github.io/geo-viet/cach-kiem-tra-perplexity-citation.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Analytics placeholder -->
+  <!-- Khi đưa lên live, cấu hình domain trong Plausible và thay data-domain="[domain-cua-ban]" để bật analytics. Trong preview local có thể không load script ngoài. -->
+  <script defer data-domain="quanta-tect.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"Cách kiểm tra Perplexity citation",
+        "description":"Muốn biết website có được Perplexity cite hay không, bạn có thể kiểm tra thủ công bằng một bộ prompt cố định, kết hợp theo dõi referral traffic và log kết quả hàng tuần.",
+        "datePublished":"2026-07-18",
+        "dateModified":"2026-07-18",
+        "author":{"@type":"Organization","name":"GEO Việt Nam"},
+        "publisher":{"@type":"Organization","name":"GEO Việt Nam"},
+        "mainEntityOfPage":"https://quanta-tect.github.io/geo-viet/cach-kiem-tra-perplexity-citation.html",
+        "inLanguage":"vi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Citation có đảm bảo traffic không?",
+            "acceptedAnswer":{"@type":"Answer","text":"Không tuyệt đối. Citation giúp nhận diện, nhưng click phụ thuộc câu trả lời và intent. Một số citation kéo traffic referral rõ rệt, số khác chỉ giúp brand trust."}
+          },
+          {
+            "@type":"Question",
+            "name":"Nên đo citation mỗi ngày hay mỗi tuần?",
+            "acceptedAnswer":{"@type":"Answer","text":"Mỗi tuần là đủ. Perplexity đổi nguồn theo ngày, nên theo dõi quá thường xuyên dễ nhiễu. Ghi độ trễ giữa khi publish bài và khi bắt đầu xuất hiện citation."}
+          },
+          {
+            "@type":"Question",
+            "name":"Nếu không thấy citation sau 1 tháng thì sao?",
+            "acceptedAnswer":{"@type":"Answer","text":"Xem lại robots.txt, chủ đề content có đúng intent không, và link nội bộ có đủ mạnh không. Rồi mới quyết định có nên viết lại bài hay không."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">GEO Việt Nam</a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <article class="wrap narrow">
+      <p class="eyebrow">Guide</p>
+      <h1>Cách kiểm tra Perplexity citation</h1>
+      <p class="lead">Muốn biết website có được Perplexity cite hay không, bạn có thể kiểm tra thủ công bằng một bộ prompt cố định, kết hợp theo dõi referral traffic và log kết quả hàng tuần.</p>
+
+      <h2>Perplexity citation là gì?</h2>
+      <p>Citation là trích dẫn URL nguồn trong câu trả lời của Perplexity. Nếu domain của bạn xuất hiện, đó là dấu hiệu nội dung đủ sạch, đủ trust để AI chọn.</p>
+
+      <h2>Citation khác backlink như thế nào?</h2>
+      <ul class="bullet-list">
+        <li>Backlink đến từ site khác chèn link vào trang; citation đến từ AI trích xuất nguồn để trả lời người dùng.</li>
+        <li>Citation không cần bạn đứng top 1 SERP; nội dung có thể rank thấp nhưng vẫn được chọn nếu đúng intent.</li>
+        <li>Citation đo bằng quan sát trong Perplexity, không phải bằng tool backlink thông thường.</li>
+      </ul>
+
+      <h2>Cách kiểm tra thủ công bằng prompt</h2>
+      <p>Chuẩn bị 5–10 intent mục tiêu liên quan niche, vào Perplexity và gõ lại y nguyên mỗi tuần.</p>
+      <ol class="bullet-list">
+        <li>Mở Perplexity, chọn <strong>Academic / Web</strong>.</li>
+        <li>Nhập prompt cố định, ví dụ: <em>"cách kiểm tra GEO cho site mới tiếng Việt"</em>.</li>
+        <li>Kiểm tra URL có xuất hiện trong phần Sources không.</li>
+        <li>Ghi lại: prompt, vị trí nguồn, mô tả hiển thị, sentiment.</li>
+      </ol>
+
+      <h2>Nên theo dõi theo bảng nào?</h2>
+      <p>Dùng bảng đơn giản 6 cột: Ngày | Prompt | Có cite? | Vị trí | Tiêu đề hiển thị | Ghi chú.</p>
+      <p>Todo nên log ít nhất 4 tuần để thấy xu hướng. Mỗi tuần nên thử 5–8 prompt, cố định không đổi.</p>
+
+      <h2>Có thể đo bằng công cụ gì?</h2>
+      <ul class="bullet-list">
+        <li><strong>GA4 / referral:</strong> kiểm tra nguồn từ <code>perplexity.ai</code> trong Acquisition > Traffic acquisition.</li>
+        <li><strong>Tool audit:</strong> dùng <a href="tool.html">tool audit</a> để sinh checklist kiểm tra nhanh.</li>
+        <li><strong>Bảng theo dõi:</strong> log thủ công để bắt xu hướng, vì tool auto chưa đủ chính xác.</li>
+      </ul>
+
+      <h2>Sai lầm phổ biến khi tự kiểm tra citation</h2>
+      <ul class="bullet-list">
+        <li>Đổi prompt liên tục: không so sánh được giữa các tuần.</li>
+        <li>Chỉ nhìn SERP Google: citation từ Perplexity/Bing không tương đồng.</li>
+        <li>Quên kiểm tra mẫu robots.txt: nếu chặn PerplexityBot, AI không thể cite bạn.</li>
+        <li>Đo traffic referral thay vì log prompt: hai chỉ số phải đi cùng nhau.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>Citation có đảm bảo traffic không?</summary>
+          <p>Không tuyệt đối. Citation giúp nhận diện, nhưng click phụ thuộc câu trả lời và intent. Một số citation kéo traffic referral rõ rệt, số khác chỉ giúp brand trust.</p>
+        </details>
+        <details>
+          <summary>Nên đo citation mỗi ngày hay mỗi tuần?</summary>
+          <p>Mỗi tuần là đủ. Perplexity đổi nguồn theo ngày, nên theo dõi quá thường xuyên dễ nhiễu. Ghi độ trễ giữa khi publish bài và khi bắt đầu xuất hiện citation.</p>
+        </details>
+        <details>
+          <summary>Nếu không thấy citation sau 1 tháng thì sao?</summary>
+          <p>Xem lại robots.txt, chủ đề content có đúng intent không, và link nội bộ có đủ mạnh không. Rồi mới quyết định có nên viết lại bài hay không.</p>
+        </details>
+      </div>
+
+      <h2>Đọc tiếp</h2>
+      <div class="article-grid compact">
+        <a class="article-card" href="perplexity-citation-la-gi.html">
+          <span class="kicker">Guide</span>
+          <h3>Perplexity citation là gì?</h3>
+          <p>Tổng quan khái niệm và cách tăng cơ hội được cite.</p>
+        </a>
+        <a class="article-card" href="cach-do-ai-visibility.html">
+          <span class="kicker">Analytics</span>
+          <h3>Cách đo AI visibility</h3>
+          <p>Theo dõi referral, citation và impressions AI.</p>
+        </a>
+        <a class="article-card" href="tool.html">
+          <span class="kicker">Utility</span>
+          <h3>Tool audit GEO</h3>
+          <p>Checklist kiểm tra crawlability và internal linking.</p>
+        </a>
+        <a class="article-card" href="robots-txt-cho-ai-crawler.html">
+          <span class="kicker">Utility</span>
+          <h3>Mẫu robots.txt cho AI crawler</h3>
+          <p>Khi nào mở/bot nào cần phép crawl.</p>
+        </a>
+        <a class="article-card" href="seo-vs-geo-vs-aeo.html">
+          <span class="kicker">So sánh</span>
+          <h3>SEO vs GEO vs AEO</h3>
+          <p>Chọn đúng chỉ số đo lường cho từng mục tiêu.</p>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>GEO Việt Nam</strong>
+        <p>Cập nhật: 18-07-2026</p>
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="privacy.html">Chính sách riêng tư</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="tool.html">Tool Audit</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

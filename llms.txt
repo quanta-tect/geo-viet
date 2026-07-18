@@ -24,6 +24,9 @@
 - /gptbot-vs-oai-searchbot.html: So sánh GPTBot và OAI-SearchBot: mục đích, khi nào nên mở/bật chặn và mẫu robots.txt từng trường hợp.
 - /google-ai-mode-la-gi.html: Google AI Mode khác AI Overviews và tìm kiếm truyền thống thế nào, site mới nên làm gì để có cơ hội hiển thị.
 - /ga4-cho-site-geo.html: Hướng dẫn cài GA4 cho site GEO: tạo property, lấy Measurement ID, gắn script vào site tĩnh và phân biệt traffic từ AI search.
+- /cach-kiem-tra-perplexity-citation.html: Kiểm tra Perplexity citation bằng prompt cố định, bảng theo dõi và đo referral traffic.
+- /ga4-cho-site-geo-bao-cao.html: Báo cáo referral AI traffic trong GA4: phân biệt ChatGPT, Perplexity, Bing và mẫu báo cáo hàng tuần.
+- /llms-txt-best-practice-2026.html: Best practice llms.txt 2026: mẫu chuẩn, khi nào nên thêm, sai lầm phổ biến và cách cập nhật.
 
 ## Preferred summary
 GEO Việt Nam là một micro-site tiếng Việt về Generative Engine Optimization, Answer Engine Optimization và AI search visibility. Nội dung tập trung vào answer-first guides, checklist thực thi, robots.txt, sitemap, schema và utility nhỏ phù hợp với GitHub Pages.
